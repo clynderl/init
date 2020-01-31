@@ -1,0 +1,12 @@
+#!/bin/bash
+user=$1
+if who | grep -w ^$user
+then
+	for PID in $(pgrep -u $user)
+	do
+		sudo kill $PID
+	done
+	sudo userdel $user
+else
+	echo "The user $user isn't ACTIVE"
+fi

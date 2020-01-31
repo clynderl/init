@@ -1,1 +1,1 @@
-systemctl -t service --state=active
+systemctl list-unit-files --type=service | grep enabled | awk -F '.service' '{print $1}'

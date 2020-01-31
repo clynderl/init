@@ -1,1 +1,4 @@
-192.168.20.1
+traceroute slash16.org
+1: Local IP
+2: NAT IP
+3: Public IP

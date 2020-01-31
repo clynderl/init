@@ -1,1 +1,2 @@
-21-school.ru
+#nslookup (OUTPUT 12) |grep name | awk '{print $4}'
+oa-f2.21-school.ru

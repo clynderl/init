@@ -1,1 +1,1 @@
-systemctl stop sshd
+systemctl stop ssh

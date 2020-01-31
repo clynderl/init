@@ -1,1 +1,1 @@
-ipconfig getpacket en0 | grep siaddr
+ifconfig en0 | grep "inet " | awk '{print $2}'

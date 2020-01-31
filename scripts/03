@@ -1,0 +1,14 @@
+#!/bin/bash
+logged_on=$(who | grep -i -m 1 $1 | awk '{print $1}')
+if [ -z $logged_on ]
+then
+	echo "$1 is not logged in"
+	exit
+fi
+shift
+while [ -n "$1" ]
+do
+	message=$message' '$1
+	shift
+done
+echo $message | write $logged_on
